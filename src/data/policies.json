@@ -1,0 +1,52 @@
+{
+ "chinh-sach-doi-tra": {
+  "title": "Chính sách đổi trả",
+  "blocks": [
+   {
+    "type": "paragraph",
+    "html": "Arch Flowers cam kết hoa tươi, đúng mẫu đã xác nhận với khách khi chốt đơn. Trước khi giao, shop gửi ảnh và video bó hoa qua Zalo để bạn xem."
+   },
+   {
+    "type": "paragraph",
+    "html": "Nếu hoa bị dập, héo hoặc không đúng mẫu khi nhận, vui lòng chụp ảnh và nhắn Zalo 0384 790 349 trong ngày nhận hoa. Shop sẽ đổi mới miễn phí."
+   },
+   {
+    "type": "paragraph",
+    "html": "Vì hoa tươi là sản phẩm theo ngày, shop không nhận trả lại hoa đã giao đúng mẫu và còn tươi."
+   },
+   {
+    "type": "paragraph",
+    "html": "Thanh toán: tiền mặt khi nhận hàng (COD) hoặc chuyển khoản. Phí giao theo khu vực, shop báo khi xác nhận đơn; freeship bán kính 1km quanh cửa hàng."
+   },
+   {
+    "type": "paragraph",
+    "html": "@@LINK|collections/all/|Xem bộ sưu tập@@"
+   }
+  ]
+ },
+ "chinh-sach-bao-mat": {
+  "title": "Chính sách bảo mật",
+  "blocks": [
+   {
+    "type": "paragraph",
+    "html": "Khi đặt hoa, bạn cung cấp họ tên, số điện thoại người đặt và địa chỉ, tên, số điện thoại người nhận."
+   },
+   {
+    "type": "paragraph",
+    "html": "Arch Flowers chỉ dùng các thông tin này để xác nhận đơn, liên hệ và giao hoa. Shop không bán hay chia sẻ thông tin của bạn cho bên thứ ba, trừ đơn vị giao hàng khi cần giao đơn."
+   },
+   {
+    "type": "paragraph",
+    "html": "Giỏ hàng và thông tin người đặt được lưu trên trình duyệt của bạn để tiện đặt lần sau; bạn có thể xóa bằng cách xóa giỏ hàng hoặc dữ liệu trình duyệt."
+   },
+   {
+    "type": "paragraph",
+    "html": "Mọi yêu cầu về thông tin cá nhân, vui lòng nhắn Zalo hoặc gọi 0384 790 349."
+   },
+   {
+    "type": "paragraph",
+    "html": "@@LINK|collections/all/|Xem bộ sưu tập@@"
+   }
+  ]
+ }
+}

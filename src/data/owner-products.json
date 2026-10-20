@@ -1,0 +1,388 @@
+[
+ {
+  "handle": "gio-hoa-tulip-hong-trang",
+  "title": "Giỏ Hoa Tulip Hồng Trắng A0409",
+  "price": 1450000,
+  "compare": 1900000,
+  "type": "Hoa giỏ",
+  "tags": [],
+  "images": [
+   "/img/goc-gio-tulip.jpg",
+   "/img/gio-tulip-2.jpg",
+   "/img/gio-tulip-3.jpg"
+  ],
+  "collections": [
+   "hoa-sinh-nhat"
+  ],
+  "desc": "Giỏ hoa tulip hồng và trắng, điểm cúc họa mi, hoa ren trắng và lá xanh, cắm trong giỏ mây thắt nơ hồng. Size vừa 10 bông tulip, size to 20 bông tulip.",
+  "variants": [
+   {
+    "title": "Vừa (10 bông tulip)",
+    "price": 1450000,
+    "compare": 1900000
+   },
+   {
+    "title": "To (20 bông tulip)",
+    "price": 2150000,
+    "compare": 2400000
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-tulip-do-trang",
+  "title": "Bó Hoa Tulip Đỏ Trắng A0410",
+  "price": 1250000,
+  "compare": 1400000,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/goc-bo-tulip-do-2.jpg",
+   "/img/bo-tulip-do-2.jpg",
+   "/img/bo-tulip-do-3.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hoa tulip đỏ và trắng, điểm cỏ lăn tăn, gói giấy dó trắng viền đỏ, thắt ruy băng đỏ. Size vừa 10 bông tulip, size to 20 bông tulip.",
+  "variants": [
+   {
+    "title": "Vừa (10 bông tulip)",
+    "price": 1250000,
+    "compare": 1400000
+   },
+   {
+    "title": "To (20 bông tulip)",
+    "price": 1600000,
+    "compare": 1700000
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-bibi-giay-hong",
+  "title": "Bó Hoa Bibi Giấy Hồng A0411",
+  "price": 250000,
+  "compare": 300000,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/goc-bibi-1.jpg",
+   "/img/goc-bibi-3.jpg",
+   "/img/bo-bibi-hong-3.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hoa baby trắng điểm cúc họa mi, gói giấy nhăn hồng phấn, thắt nơ caro hồng và chuỗi ngọc trai.",
+  "variants": [
+   {
+    "title": "Vừa",
+    "price": 250000,
+    "compare": 300000
+   },
+   {
+    "title": "To",
+    "price": 650000,
+    "compare": 750000
+   }
+  ]
+ },
+ {
+  "handle": "gio-hoa-hong-vang-kem",
+  "title": "Giỏ Hoa Hồng Vàng Kem A0412",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa giỏ",
+  "tags": [],
+  "images": [
+   "/img/a0412-1.jpg",
+   "/img/a0412-2.jpg",
+   "/img/a0412-3.jpg"
+  ],
+  "collections": [
+   "hoa-gio"
+  ],
+  "desc": "Giỏ cói cắm hồng vàng và hồng kem, điểm hoa thạch thảo trắng, lá bạch đàn, thắt nơ lụa vàng và ngọc trai.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-hong-phan",
+  "title": "Bó Hoa Hồng Phấn A0413",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0413-1.jpg",
+   "/img/a0413-2.jpg",
+   "/img/a0413-3.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hồng phấn dáng tròn, gói giấy nhăn hồng, thắt nơ lụa kem lớn và ruy băng hồng đào.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "gio-hoa-hong-vang-no-lua",
+  "title": "Giỏ Hoa Hồng Vàng Nơ Lụa A0414",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa giỏ",
+  "tags": [],
+  "images": [
+   "/img/a0414-1.jpg",
+   "/img/a0414-2.jpg",
+   "/img/a0414-1.jpg"
+  ],
+  "collections": [
+   "hoa-gio"
+  ],
+  "desc": "Giỏ mây cắm hồng vàng, điểm cúc họa mi, hoa ren trắng và lá xanh, thắt nơ lụa kem.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-cuc-tana-a0415",
+  "title": "Bó Hoa Cúc Tana A0415",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0415-1.jpg",
+   "/img/a0415-2.jpg",
+   "/img/a0415-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó cúc tana trắng nhuỵ vàng, gói giấy kraft và vải bố kem, ruy băng hồng nhạt.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "gio-hoa-lan-vu-nu-ho-diep",
+  "title": "Giỏ Hoa Lan Vũ Nữ Hồ Điệp Trắng A0416",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa giỏ",
+  "tags": [],
+  "images": [
+   "/img/a0416-1.jpg",
+   "/img/a0416-1.jpg",
+   "/img/a0416-1.jpg"
+  ],
+  "collections": [
+   "hoa-gio"
+  ],
+  "desc": "Giỏ cói cắm lan vũ nữ vàng và lan hồ điệp trắng, điểm lá bạch đàn và cỏ xanh.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "gio-hoa-cuc-tana",
+  "title": "Giỏ Hoa Cúc Tana A0417",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa giỏ",
+  "tags": [],
+  "images": [
+   "/img/a0417-1.jpg",
+   "/img/a0417-1.jpg",
+   "/img/a0417-1.jpg"
+  ],
+  "collections": [
+   "hoa-gio"
+  ],
+  "desc": "Giỏ cói cắm cúc tana trắng nhuỵ vàng dáng tròn bồng, thắt ruy băng lụa trắng.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-tulip-hong-giay-trong",
+  "title": "Bó Hoa Tulip Hồng Giấy Trong A0418",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0418-1.jpg",
+   "/img/a0418-1.jpg",
+   "/img/a0418-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó tulip hồng gói giấy trong suốt ánh hồng, lót giấy nhăn và thắt nơ voan hồng.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-hong-do-hong-phan",
+  "title": "Bó Hoa Hồng Đỏ Hồng Phấn A0419",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0419-1.jpg",
+   "/img/a0419-2.jpg",
+   "/img/a0419-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hồng đỏ xen hồng phấn, gói giấy trắng mờ, thắt dây da đỏ.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-hong-do-giay-den-luoi-vang",
+  "title": "Bó Hoa Hồng Đỏ Giấy Đen Lưới Vàng A0420",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0420-1.jpg",
+   "/img/a0420-1.jpg",
+   "/img/a0420-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hồng đỏ gói giấy đen và lưới sợi vàng, ruy băng đỏ.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-hong-do-giay-den",
+  "title": "Bó Hoa Hồng Đỏ Giấy Đen A0421",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0421-1.jpg",
+   "/img/a0421-1.jpg",
+   "/img/a0421-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hồng đỏ gói giấy đen, thắt dây da đỏ và nơ lụa đỏ.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-cam-tu-cau-cat-tuong-trang",
+  "title": "Bó Hoa Cẩm Tú Cầu Cát Tường Trắng A0422",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0422-1.jpg",
+   "/img/a0422-2.jpg",
+   "/img/a0422-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó cẩm tú cầu xanh ngọc, cát tường trắng và cỏ xanh, gói giấy xanh mint, nơ lụa xanh dương.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-hong-kem-phan",
+  "title": "Bó Hoa Hồng Kem Phấn A0423",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0423-1.jpg",
+   "/img/a0423-2.jpg",
+   "/img/a0423-3.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó hồng kem và hồng phấn dáng tròn, điểm cỏ xanh, gói giấy hồng đào, nơ lụa kem.",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ },
+ {
+  "handle": "bo-hoa-tulip-hong-nhat",
+  "title": "Bó Hoa Tulip Hồng Nhạt A0424",
+  "price": 0,
+  "compare": 0,
+  "type": "Hoa bó",
+  "tags": [],
+  "images": [
+   "/img/a0424-1.jpg",
+   "/img/a0424-2.jpg",
+   "/img/a0424-1.jpg"
+  ],
+  "collections": [
+   "hoa-bo"
+  ],
+  "desc": "Bó tulip hồng nhạt, điểm cỏ mây và chuỗi ngọc trai, gói giấy hồng phấn, ruy băng \"Just for you\".",
+  "variants": [
+   {
+    "title": "Tiêu chuẩn",
+    "price": 0
+   }
+  ]
+ }
+]

@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+Disallow: /product.html
+Disallow: /collection.html
+Sitemap: https://archflowers.com/sitemap.xml
