@@ -1,5 +1,9 @@
 {
-  "name": "archflowers-reference",
+  "name": "larom-reference",
+  "title": "Larom Flower theme contract",
+  "description": "Design tokens measured from the captured reference stylesheet (docs/reference/captures/style.css), applied to the Larom Flower storefront. Provenance is the original archflowers.com capture.",
+  "alt": "Larom Flower design token contract",
+  "caption": "Tokens generated into src/styles/tokens.css by scripts/generate-tokens.mjs",
   "version": "1.0.0",
   "verificationStatus": "measured-from-captured-stylesheet",
   "referenceUrl": "https://archflowers.com/",

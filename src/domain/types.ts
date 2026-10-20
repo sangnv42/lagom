@@ -20,7 +20,7 @@ export type Product = {
   id: string; // == slug (observed: handle is the identity)
   slug: string;
   sku: string; // e.g. "A0302"; can be '' when the title carries no code
-  title: string; // display name (possibly corrected by text-fixes.json)
+  title: string; // display name (e.g. "Hoa Larom số 12")
   description: string;
   collectionSlugs: string[];
   flowerType: string; // e.g. "Hoa bó"

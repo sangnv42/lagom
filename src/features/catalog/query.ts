@@ -84,7 +84,7 @@ export function queryCatalog(products: Product[], f: CatalogFilters): CatalogRes
 // form types duplicate the collection chips and are shown only with their collection).
 export function flowerTypes(products: Product[]): string[] {
   return [...new Set(products.map((p) => p.flowerType))].filter(
-    (t) => t !== 'Khác' && !/^kệ hoa/i.test(t)
+    (t) => t && t !== 'Khác' && !/^kệ hoa/i.test(t)
   );
 }
 

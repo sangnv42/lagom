@@ -1,5 +1,5 @@
 // Post-build: writes dist/sitemap.xml and dist/robots.txt listing ONLY canonical reconstruction routes
-// (home, 9 collections, 2 policies, product slugs after the observed ke-flower removal).
+// (home, 9 collections, 2 policies, the 60 Larom flower slugs from the owner price list).
 // Aliases (redirects), /dev/*, and placeholder content are excluded (Phase 8 acceptance).
 import { readFileSync, writeFileSync, existsSync } from 'node:fs';
 
@@ -17,11 +17,15 @@ function parseJson(path) {
     throw new Error(`cannot read ${path}: ${e.message}`);
   }
 }
-const raw = parseJson('src/data/observed-data.json');
-const owner = parseJson('src/data/owner-products.json');
-const isKe = (p) => p.collections.includes('hoa-ke-1') || /kệ/i.test(p.title.normalize('NFC'));
-const products = [...owner, ...raw.products.filter((p) => !isKe(p))];
-const collections = raw.collections.filter((c) => c.handle !== 'hoa-ke-1').map((c) => c.handle);
+const prices = parseJson('src/data/flower-prices.json');
+// Slugs mirror src/data/catalog.ts: hoa-N, second occurrence of a printed number gets 'b'.
+const seenNums = new Map();
+const products = prices.items.map((it) => {
+  const count = (seenNums.get(it.product_number) ?? 0) + 1;
+  seenNums.set(it.product_number, count);
+  return { handle: `hoa-${it.product_number}${count > 1 ? String.fromCharCode(64 + count).toLowerCase() : ''}` };
+});
+const collections = ['bo-suu-tap-moi', 'hoa-bo', 'hoa-gio', 'hoa-hop', 'hoa-khai-truong', 'hoa-sinh-nhat', 'hoa-cuoi'];
 const routes = [
   '/',
   '/collections/all/',

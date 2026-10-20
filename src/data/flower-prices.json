@@ -1,0 +1,553 @@
+{
+  "currency": "VND",
+  "currency_note": "Vietnamese dong is assumed from the catalog context; the printed price labels do not include a currency symbol.",
+  "source_image_count": 10,
+  "item_count": 60,
+  "notes": [
+    "Product numbers are transcribed exactly as printed. Numbers 39, 40, and 41 occur in two different source images and are kept as separate items.",
+    "Cropped image filenames match the previously provided 60-image set. Entries follow left-to-right, top-to-bottom order within each source image."
+  ],
+  "items": [
+    {
+      "id": "page_01_item_01",
+      "product_number": 1,
+      "price_vnd": 500000,
+      "price_label": "500.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_01_anh_01.jpg"
+    },
+    {
+      "id": "page_01_item_02",
+      "product_number": 2,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_01_anh_02.jpg"
+    },
+    {
+      "id": "page_01_item_03",
+      "product_number": 3,
+      "price_vnd": 880000,
+      "price_label": "880.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_01_anh_03.jpg"
+    },
+    {
+      "id": "page_01_item_04",
+      "product_number": 4,
+      "price_vnd": 1100000,
+      "price_label": "1.100.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_01_anh_04.jpg"
+    },
+    {
+      "id": "page_01_item_05",
+      "product_number": 5,
+      "price_vnd": 2000000,
+      "price_label": "2.000.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_01_anh_05.jpg"
+    },
+    {
+      "id": "page_01_item_06",
+      "product_number": 6,
+      "price_vnd": 2500000,
+      "price_label": "2.500.000",
+      "source_image": "1792294830961_849205873074460522_849205873074460522_b4dba5045c07746d8b19f73862c38ef6.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_01_anh_06.jpg"
+    },
+    {
+      "id": "page_02_item_01",
+      "product_number": 19,
+      "price_vnd": 385000,
+      "price_label": "385.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_02_anh_01.jpg"
+    },
+    {
+      "id": "page_02_item_02",
+      "product_number": 20,
+      "price_vnd": 385000,
+      "price_label": "385.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_02_anh_02.jpg"
+    },
+    {
+      "id": "page_02_item_03",
+      "product_number": 21,
+      "price_vnd": 700000,
+      "price_label": "700.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_02_anh_03.jpg"
+    },
+    {
+      "id": "page_02_item_04",
+      "product_number": 22,
+      "price_vnd": 600000,
+      "price_label": "600.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_02_anh_04.jpg"
+    },
+    {
+      "id": "page_02_item_05",
+      "product_number": 23,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_02_anh_05.jpg"
+    },
+    {
+      "id": "page_02_item_06",
+      "product_number": 24,
+      "price_vnd": 500000,
+      "price_label": "500.000",
+      "source_image": "1792294831722_849205873074460522_849205873074460522_c61bf25cbd952cbd57142bb56b875822.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_02_anh_06.jpg"
+    },
+    {
+      "id": "page_03_item_01",
+      "product_number": 108,
+      "price_vnd": 950000,
+      "price_label": "950.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_03_anh_01.jpg"
+    },
+    {
+      "id": "page_03_item_02",
+      "product_number": 107,
+      "price_vnd": 1200000,
+      "price_label": "1.200.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_03_anh_02.jpg"
+    },
+    {
+      "id": "page_03_item_03",
+      "product_number": 27,
+      "price_vnd": 575000,
+      "price_label": "575.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_03_anh_03.jpg"
+    },
+    {
+      "id": "page_03_item_04",
+      "product_number": 103,
+      "price_vnd": 800000,
+      "price_label": "800.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_03_anh_04.jpg"
+    },
+    {
+      "id": "page_03_item_05",
+      "product_number": 29,
+      "price_vnd": 900000,
+      "price_label": "900.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_03_anh_05.jpg"
+    },
+    {
+      "id": "page_03_item_06",
+      "product_number": 30,
+      "price_vnd": 1600000,
+      "price_label": "1.600.000",
+      "source_image": "1792294832104_849205873074460522_849205873074460522_6b4f98a1cfb66404b56fe78ba92cd2c0.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_03_anh_06.jpg"
+    },
+    {
+      "id": "page_04_item_01",
+      "product_number": 35,
+      "price_vnd": 1000000,
+      "price_label": "1.000.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_04_anh_01.jpg"
+    },
+    {
+      "id": "page_04_item_02",
+      "product_number": 31,
+      "price_vnd": 1150000,
+      "price_label": "1.150.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_04_anh_02.jpg"
+    },
+    {
+      "id": "page_04_item_03",
+      "product_number": 39,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_04_anh_03.jpg"
+    },
+    {
+      "id": "page_04_item_04",
+      "product_number": 40,
+      "price_vnd": 850000,
+      "price_label": "850.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_04_anh_04.jpg"
+    },
+    {
+      "id": "page_04_item_05",
+      "product_number": 41,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_04_anh_05.jpg"
+    },
+    {
+      "id": "page_04_item_06",
+      "product_number": 32,
+      "price_vnd": 1000000,
+      "price_label": "1.000.000",
+      "source_image": "1792294832476_849205873074460522_849205873074460522_f364d3bdaf4fceef57ebc488a4e0461e.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_04_anh_06.jpg"
+    },
+    {
+      "id": "page_05_item_01",
+      "product_number": 61,
+      "price_vnd": 750000,
+      "price_label": "750.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_05_anh_01.jpg"
+    },
+    {
+      "id": "page_05_item_02",
+      "product_number": 62,
+      "price_vnd": 450000,
+      "price_label": "450.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_05_anh_02.jpg"
+    },
+    {
+      "id": "page_05_item_03",
+      "product_number": 63,
+      "price_vnd": 1100000,
+      "price_label": "1.100.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_05_anh_03.jpg"
+    },
+    {
+      "id": "page_05_item_04",
+      "product_number": 64,
+      "price_vnd": 750000,
+      "price_label": "750.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_05_anh_04.jpg"
+    },
+    {
+      "id": "page_05_item_05",
+      "product_number": 65,
+      "price_vnd": 575000,
+      "price_label": "575.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_05_anh_05.jpg"
+    },
+    {
+      "id": "page_05_item_06",
+      "product_number": 66,
+      "price_vnd": 575000,
+      "price_label": "575.000",
+      "source_image": "1792294832808_849205873074460522_849205873074460522_2677ec0c7fd33647a13a409ea1e8a814.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_05_anh_06.jpg"
+    },
+    {
+      "id": "page_06_item_01",
+      "product_number": 37,
+      "price_vnd": 500000,
+      "price_label": "500.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_06_anh_01.jpg"
+    },
+    {
+      "id": "page_06_item_02",
+      "product_number": 38,
+      "price_vnd": 1500000,
+      "price_label": "1.500.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_06_anh_02.jpg"
+    },
+    {
+      "id": "page_06_item_03",
+      "product_number": 39,
+      "price_vnd": 950000,
+      "price_label": "950.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_06_anh_03.jpg"
+    },
+    {
+      "id": "page_06_item_04",
+      "product_number": 40,
+      "price_vnd": 1800000,
+      "price_label": "1.800.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_06_anh_04.jpg"
+    },
+    {
+      "id": "page_06_item_05",
+      "product_number": 41,
+      "price_vnd": 750000,
+      "price_label": "750.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_06_anh_05.jpg"
+    },
+    {
+      "id": "page_06_item_06",
+      "product_number": 42,
+      "price_vnd": 1800000,
+      "price_label": "1.800.000",
+      "source_image": "1792294833192_849205873074460522_849205873074460522_f2a801cffb3458182722e35f86561375.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_06_anh_06.jpg"
+    },
+    {
+      "id": "page_07_item_01",
+      "product_number": 85,
+      "price_vnd": 850000,
+      "price_label": "850.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_07_anh_01.jpg"
+    },
+    {
+      "id": "page_07_item_02",
+      "product_number": 86,
+      "price_vnd": 850000,
+      "price_label": "850.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_07_anh_02.jpg"
+    },
+    {
+      "id": "page_07_item_03",
+      "product_number": 87,
+      "price_vnd": 450000,
+      "price_label": "450.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_07_anh_03.jpg"
+    },
+    {
+      "id": "page_07_item_04",
+      "product_number": 88,
+      "price_vnd": 450000,
+      "price_label": "450.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_07_anh_04.jpg"
+    },
+    {
+      "id": "page_07_item_05",
+      "product_number": 89,
+      "price_vnd": 380000,
+      "price_label": "380.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_07_anh_05.jpg"
+    },
+    {
+      "id": "page_07_item_06",
+      "product_number": 90,
+      "price_vnd": 380000,
+      "price_label": "380.000",
+      "source_image": "1792294833591_849205873074460522_849205873074460522_167a2e01a96810790a4c083895f13192.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_07_anh_06.jpg"
+    },
+    {
+      "id": "page_08_item_01",
+      "product_number": 55,
+      "price_vnd": 300000,
+      "price_label": "300.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_08_anh_01.jpg"
+    },
+    {
+      "id": "page_08_item_02",
+      "product_number": 56,
+      "price_vnd": 420000,
+      "price_label": "420.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_08_anh_02.jpg"
+    },
+    {
+      "id": "page_08_item_03",
+      "product_number": 53,
+      "price_vnd": 300000,
+      "price_label": "300.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_08_anh_03.jpg"
+    },
+    {
+      "id": "page_08_item_04",
+      "product_number": 58,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_08_anh_04.jpg"
+    },
+    {
+      "id": "page_08_item_05",
+      "product_number": 59,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_08_anh_05.jpg"
+    },
+    {
+      "id": "page_08_item_06",
+      "product_number": 60,
+      "price_vnd": 1000000,
+      "price_label": "1.000.000",
+      "source_image": "1792294833943_849205873074460522_849205873074460522_5c22b548ecdad1adb0e087cae08d76ec.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_08_anh_06.jpg"
+    },
+    {
+      "id": "page_09_item_01",
+      "product_number": 109,
+      "price_vnd": 1000000,
+      "price_label": "1.000.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_09_anh_01.jpg"
+    },
+    {
+      "id": "page_09_item_02",
+      "product_number": 110,
+      "price_vnd": 2200000,
+      "price_label": "2.200.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_09_anh_02.jpg"
+    },
+    {
+      "id": "page_09_item_03",
+      "product_number": 111,
+      "price_vnd": 500000,
+      "price_label": "500.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_09_anh_03.jpg"
+    },
+    {
+      "id": "page_09_item_04",
+      "product_number": 112,
+      "price_vnd": 500000,
+      "price_label": "500.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_09_anh_04.jpg"
+    },
+    {
+      "id": "page_09_item_05",
+      "product_number": 113,
+      "price_vnd": 850000,
+      "price_label": "850.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_09_anh_05.jpg"
+    },
+    {
+      "id": "page_09_item_06",
+      "product_number": 114,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294834381_849205873074460522_849205873074460522_364530409fdf9aae9e56a52efe69fbfe.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_09_anh_06.jpg"
+    },
+    {
+      "id": "page_10_item_01",
+      "product_number": 121,
+      "price_vnd": 750000,
+      "price_label": "750.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "top_left",
+      "cropped_image": "trang_10_anh_01.jpg"
+    },
+    {
+      "id": "page_10_item_02",
+      "product_number": 122,
+      "price_vnd": 1100000,
+      "price_label": "1.100.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "top_right",
+      "cropped_image": "trang_10_anh_02.jpg"
+    },
+    {
+      "id": "page_10_item_03",
+      "product_number": 123,
+      "price_vnd": 700000,
+      "price_label": "700.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "middle_left",
+      "cropped_image": "trang_10_anh_03.jpg"
+    },
+    {
+      "id": "page_10_item_04",
+      "product_number": 124,
+      "price_vnd": 900000,
+      "price_label": "900.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "middle_right",
+      "cropped_image": "trang_10_anh_04.jpg"
+    },
+    {
+      "id": "page_10_item_05",
+      "product_number": 125,
+      "price_vnd": 650000,
+      "price_label": "650.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "bottom_left",
+      "cropped_image": "trang_10_anh_05.jpg"
+    },
+    {
+      "id": "page_10_item_06",
+      "product_number": 126,
+      "price_vnd": 1200000,
+      "price_label": "1.200.000",
+      "source_image": "1792294834789_849205873074460522_849205873074460522_5c30ee5c018476c9b3ff660d6d16c0ed.jpg",
+      "position": "bottom_right",
+      "cropped_image": "trang_10_anh_06.jpg"
+    }
+  ]
+}
+

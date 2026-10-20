@@ -7,8 +7,21 @@ Last updated: 2026-10-20 (rebrand addendum at bottom)
 
 ## Rebrand: Larom Flower (post-verification change)
 
-The store was renamed **Arch Flowers → Larom Flower** and all imagery was replaced after the
-diff table below was produced. The byte-identical results therefore describe the pre-rebrand build.
+The store was renamed **Arch Flowers → Larom Flower**, all imagery was replaced, and the catalog was
+rebuilt from the owner's price list after the diff table below was produced. The byte-identical
+results therefore describe the pre-rebrand build.
+
+### Flower catalog (current model)
+
+- Source: `flower_prices.json` (owner, 2026-10-20) → `src/data/flower-prices.json`: **60 flowers**,
+  one product per photo, each with its correct VND price (`hoa-1` … `hoa-60`, plus `hoa-39b/40b/41b`
+  for the three numbers printed twice; second copies titled "…39B" etc.).
+- Price↔image binding is data, not round-robin anymore: `hoa-N` always shows exactly the photo
+  (`trang_NN_anh_NN.jpg`) named in its price-list row — covered by a test that validates all 60 rows.
+- Owner decision: every flower belongs to every real collection, so all category pages list the same
+  60. Titles are "Hoa Larom số N" until a name mapping is provided.
+- Old Arch slugs (e.g. /products/bo-hoa-mini-xinh/) now render the in-app 404. Sitemap = 72 routes
+  (60 products + 9 collections + 2 policies + home). Bundle shrank 673 kB → 254 kB raw.
 
 - All UI strings, SEO titles/suffixes, JSON-LD, policy & collection-SEO text: "Larom Flower" / "Larom".
 - Logo: text wordmark using the reference `.logo` text style (old wordmark artwork removed).

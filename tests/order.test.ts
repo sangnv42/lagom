@@ -5,14 +5,14 @@ import type { CartLine } from '../src/domain/types';
 
 const lines: CartLine[] = [
   {
-    productId: 'bo-hoa-mini-xinh',
-    variantLabel: 'Vừa',
+    productId: 'hoa-1',
+    variantLabel: 'Tiêu chuẩn',
     quantity: 2,
     configuration: { deliveryDate: '2026-10-19', slot: '08:00 – 11:00', message: 'Chúc mừng 20/10' },
   },
   {
-    productId: 'bo-hoa-cuc-tana-20-10-a037',
-    variantLabel: 'Vừa',
+    productId: 'hoa-2',
+    variantLabel: 'Tiêu chuẩn',
     quantity: 1,
     configuration: {},
   },
@@ -39,20 +39,22 @@ describe('order adapters (O01/O02)', () => {
 
   it('cart order message lists lines, delivery config, messages and the running total', () => {
     const { text, total } = cartOrderMessage(lines, { name: 'Minh', phone: '0901234567', note: 'Giao giờ hành chính' });
-    expect(total).toBe(2 * 380000 + 750000); // 1.510.000đ
-    expect(text).toContain('(A0302)'); // cleaned code from the proofread title
-    expect(text).toContain('Size: Vừa × 2 = 760.000đ');
+    expect(total).toBe(2 * 500000 + 650000); // hoa-1 500k ×2 + hoa-2 650k = 1.650.000đ
+    expect(text).toContain('Hoa Larom số 1');
+    expect(text).toContain('Hoa Larom số 2');
+    expect(text).toContain('Size: Tiêu chuẩn × 2 = 1.000.000đ');
     expect(text).toContain('Giao: 19/10/2026, 08:00 – 11:00'); // observed reverse-join keeps the year
     expect(text).toContain('Lời thiệp: Chúc mừng 20/10');
-    expect(text).toContain('Tạm tính: 1.510.000đ');
+    expect(text).toContain('Tạm tính: 1.650.000đ');
     expect(text).toContain('Người đặt: Minh – 0901234567');
     expect(text).toContain('Ghi chú: Giao giờ hành chính');
   });
 
-  it('quote-only ask message carries the design name and a deep link (no price)', () => {
-    const msg = askMessage('gio-hoa-hong-vang-kem'); // owner-supplied, price 0
+  it('ask message carries the design name and a deep link (no price)', () => {
+    const msg = askMessage('hoa-39b');
     expect(msg).toContain('mình muốn hỏi mẫu');
-    expect(msg).toContain('/products/gio-hoa-hong-vang-kem/');
-    expect(msg).not.toContain('0đ');
+    expect(msg).toContain('Hoa Larom số 39B');
+    expect(msg).toContain('/products/hoa-39b/');
+    expect(msg).not.toContain('đ:');
   });
 });
