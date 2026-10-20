@@ -1,4 +1,4 @@
-import theme from '../theme/archflowers.theme.json';
+import theme from '../theme/larom.theme.json';
 import { PRODUCTS } from '../data/catalog';
 import { ProductCard } from '../components/ProductCard';
 import { Seo } from '../components/Seo';
@@ -12,7 +12,7 @@ export function DevThemePage() {
   const sample = PRODUCTS.slice(0, 4);
   return (
     <>
-      <Seo title="/dev/theme | Arch Flowers" description="Internal theme state gallery." noindex />
+      <Seo title="/dev/theme | Larom Flower" description="Internal theme state gallery." noindex />
       <main id="main">
         <section className="c-hero">
           <div className="wrap">

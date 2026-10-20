@@ -1,7 +1,8 @@
-# Arch Flowers — reconstruction
+# Larom Flower — reconstruction
 
-Faithful reconstruction of https://archflowers.com/ (Vietnamese florist storefront) built with
-React 18 + TypeScript + Vite + React Router. Storefront content is Vietnamese; docs and comments are English.
+Faithful reconstruction of https://archflowers.com/ (Vietnamese florist storefront), rebranded to
+**Larom Flower** with the owner's own 60-photo flower set, built with React 18 + TypeScript + Vite +
+React Router. Storefront content is Vietnamese; docs and comments are English.
 
 Everything is evidence-based: content, styles, and behavior are transcribed from the captures in
 `docs/reference/captures/` (page HTML, `style.css`, `app.js`, `data.json`, `text-fixes.json`).

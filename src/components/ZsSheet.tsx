@@ -60,7 +60,7 @@ export function ZsSheet({ payload }: { payload: ZsPayload }) {
           <li>
             <b>Mở Zalo của shop</b>
             <span>
-              Arch Flowers · {SHOP.phoneTxt}
+              Larom Flower · {SHOP.phoneTxt}
             </span>
           </li>
           <li>

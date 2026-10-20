@@ -118,6 +118,11 @@ function buildCatalog(): { products: Product[]; collections: Collection[] } {
   const owner = ownerProducts as unknown as RawProduct[];
   const ordered = [...owner].reverse().concat(fixed);
   const sourceUrl = 'https://archflowers.com/data.json (captured 2026-10-20)';
+const HOA_IMAGES = Array.from({ length: 60 }, (_, k) => {
+  const page = Math.floor(k / 6) + 1; // trang_01..trang_10, six photos per page
+  const n = (k % 6) + 1;
+  return `/img/hoa/trang_${String(page).padStart(2, '0')}_anh_${String(n).padStart(2, '0')}.jpg`;
+});
   const products = ordered.map((p, i) => toProduct(p, i, sourceUrl));
   // text-fixes.json: proofread names/descriptions override the export text (observed)
   const fixes = textFixes as Record<string, { name?: string; desc?: string; type?: string; images?: string[] }>;
@@ -128,6 +133,10 @@ function buildCatalog(): { products: Product[]; collections: Collection[] } {
     if (f.desc) p.description = cleanDesc(f.desc);
     if (f.type) p.flowerType = f.type.normalize('NFC');
     if (f.images?.length) p.imagePaths = f.images;
+  }
+  // Rebrand: imagery is the local 60-photo set (public/img/hoa), assigned deterministically round-robin.
+  for (let i = 0; i < products.length; i++) {
+    products[i].imagePaths = [i, i + 1, i + 2].map((k) => HOA_IMAGES[k % HOA_IMAGES.length]);
   }
   const collections: Collection[] = (r.collections as RawCollection[])
     .filter((c) => c.handle !== 'hoa-ke-1')

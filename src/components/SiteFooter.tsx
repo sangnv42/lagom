@@ -25,8 +25,8 @@ export function SiteFooter() {
           </div>
           <div className="ftr-grid">
             <div>
-              <Link className="logo logo-ftr" to="/" aria-label="Arch Flowers – Trang chủ">
-                <img src="/img/logo-gold.webp" alt="Arch Flowers" width={290} height={240} loading="lazy" />
+              <Link className="logo logo-ftr" to="/" aria-label="Larom Flower – Trang chủ">
+                Larom Flower
               </Link>
               <p style={{ marginTop: 18, maxWidth: '36ch' }}>
                 Hoa tươi cao cấp &amp; quà tặng doanh nghiệp tại TP. Hồ Chí Minh. Nhận đặt hoa theo mẫu — freeship bán kính 1km.
@@ -83,7 +83,7 @@ export function SiteFooter() {
             </div>
           </div>
           <div className="ftr-bot">
-            <span>© 2026 Arch Flowers. Thiết kế bởi Arch Flowers.</span>
+            <span>© 2026 Larom Flower. Thiết kế bởi Larom Flower.</span>
             <span>
               {SHOP.reviewsScore}★ · {SHOP.reviewsCount} đánh giá Google
             </span>

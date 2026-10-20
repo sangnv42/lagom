@@ -3,7 +3,22 @@
 Tracks the Arch Flowers reconstruction against `docs/reference/prompts/01-master-prompt.md`.
 Three independent states per area: **implemented** / **functionally verified** / **visually verified**.
 
-Last updated: 2026-10-20
+Last updated: 2026-10-20 (rebrand addendum at bottom)
+
+## Rebrand: Larom Flower (post-verification change)
+
+The store was renamed **Arch Flowers → Larom Flower** and all imagery was replaced after the
+diff table below was produced. The byte-identical results therefore describe the pre-rebrand build.
+
+- All UI strings, SEO titles/suffixes, JSON-LD, policy & collection-SEO text: "Larom Flower" / "Larom".
+- Logo: text wordmark using the reference `.logo` text style (old wordmark artwork removed).
+- Imagery: the owner's 60-photo set (`public/img/hoa/trang_NN_anh_NN.jpg`), assigned to all 280 products
+  deterministically round-robin (3-photo galleries); no image request goes to archflowers.com anymore.
+- `docs/qa/larom-*.png` shows the rebranded build. Screenshots of the old brand kept for history.
+- Canonical origin still comes from `VITE_SITE_URL` (default archflowers.com) — set it to the new
+  deployment domain before going live.
+- Internal identifiers (`--af-*` tokens, `af.cart.v1` storage key, `larom.theme.json` provenance id
+  "archflowers-reference") intentionally unchanged.
 
 ## Verification method
 

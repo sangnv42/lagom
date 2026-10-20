@@ -3,6 +3,9 @@
 // Deterministic regex extraction only — the captured literals are plain quoted strings.
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 
+// Rebrand: captured text references the old store name; rewrite it on extraction.
+const brand = (s) => s.replace(/Arch Flowers/g, 'Larom Flower').replace(/\bArch\b/g, 'Larom');
+
 const app = readFileSync('docs/reference/captures/app.js', 'utf8');
 const unescapeStr = (s) => s.replace(/\\'/g, "'").replace(/\\\\/g, '\\');
 
@@ -44,7 +47,7 @@ if (!wards.length || !communes.length || !holidays.length || !Object.keys(seo).l
 const special = ['Côn Đảo'];
 writeFileSync('src/data/wards.json', JSON.stringify({ wards, communes, special }, null, 1) + '\n');
 writeFileSync('src/data/holidays.json', JSON.stringify(holidays) + '\n');
-writeFileSync('src/data/collection-seo.json', JSON.stringify(seo, null, 1) + '\n');
+writeFileSync('src/data/collection-seo.json', brand(JSON.stringify(seo, null, 1)) + '\n');
 
 function policy(file) {
   const h = readFileSync('docs/reference/captures/' + file, 'utf8');
@@ -61,7 +64,7 @@ const pol = {
   'chinh-sach-doi-tra': policy('policy_returns.html'),
   'chinh-sach-bao-mat': policy('policy_privacy.html'),
 };
-writeFileSync('src/data/policies.json', JSON.stringify(pol, null, 1) + '\n');
+writeFileSync('src/data/policies.json', brand(JSON.stringify(pol, null, 1)) + '\n');
 
 console.log('wards:', wards.length, 'communes:', communes.length);
 console.log('holidays:', holidays.join(' '));

@@ -44,8 +44,8 @@ export function SiteHeader() {
           <button className="ico menu-btn" aria-label="Mở menu" aria-expanded={menuOpen} onClick={() => setMenuOpen(true)}>
             <IconMenu />
           </button>
-          <Link className="logo" to="/" aria-label="Arch Flowers – Trang chủ">
-            <img src="/img/logo-gold.webp" alt="Arch Flowers" width={290} height={240} />
+          <Link className="logo" to="/" aria-label="Larom Flower – Trang chủ">
+            Larom Flower
           </Link>
           <nav className="nav" aria-label="Chính">
             {NAV.map((n) => (

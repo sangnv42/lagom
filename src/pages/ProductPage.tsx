@@ -180,10 +180,10 @@ export function ProductPage() {
   const lo = priced.length ? Math.min(...priced.map((x) => x.priceVnd)) : 0;
   const metaTitle = (() => {
     const base = `${p.title}${p.sku ? ' ' + p.sku : ''}`;
-    const full = `${base} – ${lo ? (priced.length > 1 ? 'từ ' : '') + fmt(lo) : 'Liên hệ'} | Arch Flowers`;
-    return full.length > 65 ? `${base} | Arch Flowers` : full;
+    const full = `${base} – ${lo ? (priced.length > 1 ? 'từ ' : '') + fmt(lo) : 'Liên hệ'} | Larom Flower`;
+    return full.length > 65 ? `${base} | Larom Flower` : full;
   })();
-  const metaDesc = `${lo ? `${p.title} giá ${priced.length > 1 ? 'từ ' : ''}${fmt(lo)}. ` : ''}${(p.description || `${p.title} cắm tay bởi florist Arch Flowers với hoa tươi trong ngày.`).replace(/\s+/g, ' ').slice(0, 120)} Giao hoa TP.HCM, nhận đặt theo mẫu.`;
+  const metaDesc = `${lo ? `${p.title} giá ${priced.length > 1 ? 'từ ' : ''}${fmt(lo)}. ` : ''}${(p.description || `${p.title} cắm tay bởi florist Larom Flower với hoa tươi trong ngày.`).replace(/\s+/g, ' ').slice(0, 120)} Giao hoa TP.HCM, nhận đặt theo mẫu.`;
   const jsonLd = useMemo(() => {
     const url = SITE_URL + productUrl(p.slug);
     const offer = (x: { priceVnd: number }) => ({
@@ -202,7 +202,7 @@ export function ProductPage() {
       url,
       image: p.imagePaths.map((u) => absAsset(optUrl(u, 1200) || u)),
       description: p.description || p.title,
-      brand: { '@type': 'Brand', name: 'Arch Flowers' },
+      brand: { '@type': 'Brand', name: 'Larom Flower' },
       category: p.flowerType,
     };
     // Quote-only designs: no offers at all — never publish a 0đ price (observed pLD rule)
@@ -467,7 +467,7 @@ export function ProductPage() {
               <details open>
                 <summary>Chi tiết sản phẩm</summary>
                 <div className="acc-b">
-                  <p>{p.description || 'Thiết kế được cắm tay bởi florist Arch Flowers với hoa tươi tuyển chọn trong ngày.'}</p>
+                  <p>{p.description || 'Thiết kế được cắm tay bởi florist Larom Flower với hoa tươi tuyển chọn trong ngày.'}</p>
                   <p>
                     Loại: {p.flowerType}. Kích thước: {p.variants.map((x) => x.label).join(' / ')}.
                   </p>

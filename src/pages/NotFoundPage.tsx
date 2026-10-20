@@ -7,7 +7,7 @@ import { Seo } from '../components/Seo';
 export function NotFoundPage({ note }: { note?: string }) {
   return (
     <>
-      <Seo title="Không tìm thấy trang | Arch Flowers" description="Trang bạn tìm không tồn tại hoặc đã được chuyển." noindex />
+      <Seo title="Không tìm thấy trang | Larom Flower" description="Trang bạn tìm không tồn tại hoặc đã được chuyển." noindex />
       <main id="main">
         <section className="c-hero">
           <div className="wrap">

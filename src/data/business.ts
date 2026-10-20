@@ -2,7 +2,7 @@
 // Values transcribed from docs/reference/captures/app.js + home.html.
 
 export const SHOP = {
-  name: 'Arch Flowers',
+  name: 'Larom Flower',
   phone: '0384790349',
   phoneTxt: '0384 790 349',
   zalo: 'https://zalo.me/0384790349',

@@ -9,7 +9,7 @@ import { Img } from '../components/Img';
 import { Seo } from '../components/Seo';
 import { ProductCard } from '../components/ProductCard';
 import { IconCard, IconPen, IconPin, IconStar, IconZalo } from '../components/icons';
-import { optUrl, SIZES } from '../lib/img';
+import { absAsset, SIZES } from '../lib/img';
 import { COLLECTION_PIN } from '../data/catalog';
 
 // Homepage sections and order transcribed from docs/reference/captures/home.html (fetched 2026-10-20).
@@ -23,8 +23,8 @@ const byColl = (h: string, n: number) =>
     .slice(0, n);
 
 const OCC_IMG: Record<string, string> = {
-  'hoa-sinh-nhat': '/img/tile-sinh-nhat-tulip.jpg',
-  'hoa-bo': '/img/tile-hoa-bo-tulip.jpg',
+  'hoa-sinh-nhat': '/img/hoa/trang_03_anh_01.jpg',
+  'hoa-bo': '/img/hoa/trang_02_anh_01.jpg',
   'hoa-cuoi': '/archflowers-export/images/1__1__e28fbc26f4d54afca6e43434d279756e.jpg',
 };
 
@@ -53,7 +53,7 @@ export function HomePage() {
   }, []);
 
   const hero = PRODUCTS.find((p) => /hồng/i.test(p.title) && p.collectionSlugs.includes('hoa-bo') && priceOf(p) >= 1_000_000) ?? PRODUCTS[0];
-  const heroImg = hero?.imagePaths[0] ?? '/img/hero.jpg';
+  const heroImg = hero?.imagePaths[0] ?? '/img/hoa/trang_01_anh_01.jpg';
   const sig = PRODUCTS.filter((p) => priceOf(p) >= 1_500_000).sort((a, b) => priceOf(b) - priceOf(a));
   const sigFeature = sig[0] ?? PRODUCTS[0];
   const best = [...byColl('hoa-bo', 3), ...byColl('hoa-hop', 2), ...byColl('hoa-gio', 2), ...byColl('hoa-sinh-nhat', 1)];
@@ -71,15 +71,15 @@ export function HomePage() {
   return (
     <>
       <Seo
-        title="Arch Flowers – Hoa Tươi Cao Cấp, Cắm Tay Tại TP.HCM"
+        title="Larom Flower – Hoa Tươi Cao Cấp, Cắm Tay Tại TP.HCM"
         description="Bó hoa, giỏ hoa, hộp hoa và lẵng khai trương được florist cắm tay từ hoa tươi trong ngày – tinh tế, sang trọng. Giao tận nơi khắp TP.HCM."
         path="/"
-        image="https://archflowers.com/archflowers-export/images/bf66b560-5b08-4ceb-870f-aa600cc93779_91130f9f12de4d71858e504f5726f7c3.jpg"
+        image={absAsset(heroImg)}
       />
       <main id="main">
-        <section className="hero" aria-labelledby="h1" style={{ ['--hero-img' as string]: `url("${optUrl(heroImg, 400)}")` }}>
+        <section className="hero" aria-labelledby="h1" style={{ ['--hero-img' as string]: `url("${heroImg}")` }}>
           <div className="hero-bg">
-            <Img src={heroImg} alt={hero?.title ?? 'Hoa tươi Arch Flowers'} eager sizes="(max-width:899px) 100vw, 64vw" fetchPriority="high" />
+            <Img src={heroImg} alt={hero?.title ?? 'Hoa tươi Larom Flower'} eager sizes="(max-width:899px) 100vw, 64vw" fetchPriority="high" />
           </div>
           <div className="hero-in">
             <div>
@@ -184,7 +184,7 @@ export function HomePage() {
             <SectionHeading
               eyebrow="The Signature"
               title={<>Bộ sưu tập <em>Signature</em></>}
-              lead="Những thiết kế đắt giá nhất của Arch — hoa nhập khẩu, bình gốm thủ công, dành cho món quà không thể quên."
+              lead="Những thiết kế đắt giá nhất của Larom — hoa nhập khẩu, bình gốm thủ công, dành cho món quà không thể quên."
             />
             <div className="sig">
               <div className="sig-feature rv in">
@@ -299,7 +299,7 @@ export function HomePage() {
                 Giao hoa <em>tận tay</em> khắp TP.HCM
               </h2>
               <p className="lead" style={{ marginTop: 18 }}>
-                Đội giao hàng riêng của Arch đảm bảo hoa đến tay nguyên vẹn, đúng khung giờ. Đơn giao trong ngày: đặt trước ít nhất 2 tiếng (trước 13:00 cho khung 15:00 – 18:00; ngày lễ trước 16:00 cho khung tối).
+                Đội giao hàng riêng của Larom đảm bảo hoa đến tay nguyên vẹn, đúng khung giờ. Đơn giao trong ngày: đặt trước ít nhất 2 tiếng (trước 13:00 cho khung 15:00 – 18:00; ngày lễ trước 16:00 cho khung tối).
               </p>
               <ul className="districts">
                 {['Quận 1', 'Quận 3', 'Quận 4', 'Quận 5', 'Quận 7', 'Quận 10', 'Bình Thạnh', 'Phú Nhuận', 'Tân Bình', 'Gò Vấp', 'TP. Thủ Đức', 'Tân Phú', '+ ngoại thành'].map((d) => (
@@ -357,19 +357,19 @@ export function HomePage() {
         <section className="sec" aria-labelledby="storyH">
           <div className="wrap story">
             <figure className="rv in">
-              <Img src={story.imagePaths[0]} alt="Florist Arch Flowers cắm hoa" sizes={SIZES.card} />
+              <Img src={story.imagePaths[0]} alt="Florist Larom Flower cắm hoa" sizes={SIZES.card} />
               <div className="small-img">
                 <Img src={(PRODUCTS[10] ?? story).imagePaths[0]} alt="Chi tiết bó hoa" sizes={SIZES.card} />
               </div>
             </figure>
             <div className="copy rv in">
-              <span className="eyebrow">Câu chuyện Arch</span>
+              <span className="eyebrow">Câu chuyện Larom</span>
               <h2 className="h2" id="storyH" style={{ marginTop: 14 }}>
                 Nghệ thuật <em>trao gửi</em>
               </h2>
               <blockquote>“Mỗi bó hoa là một lời chưa nói thành lời.”</blockquote>
               <p className="lead">
-                Arch Flowers ra đời giữa lòng Sài Gòn với niềm tin rằng hoa không chỉ để ngắm — hoa là cách gửi gắm sự trân trọng. Mỗi thiết kế được tuyển chọn hoa tươi trong ngày và cắm tay tỉ mỉ, để món quà của bạn luôn đẹp như khoảnh khắc nó được trao.
+                Larom Flower ra đời giữa lòng Sài Gòn với niềm tin rằng hoa không chỉ để ngắm — hoa là cách gửi gắm sự trân trọng. Mỗi thiết kế được tuyển chọn hoa tươi trong ngày và cắm tay tỉ mỉ, để món quà của bạn luôn đẹp như khoảnh khắc nó được trao.
               </p>
               <Link className="link" to={collectionUrl('bo-suu-tap-moi')}>
                 Khám phá bộ sưu tập mới

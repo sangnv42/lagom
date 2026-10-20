@@ -44,7 +44,7 @@ export function productOrderMessage(opts: {
   const code = p?.sku ? ` (${p.sku})` : '';
   const where = [opts.address, opts.district].filter(Boolean).join(', ');
   return [
-    `Chào Arch Flowers, mình muốn đặt mẫu ${name}${code}`,
+    `Chào Larom Flower, mình muốn đặt mẫu ${name}${code}`,
     `Size: ${opts.variantLabel} – ${pfmt(opts.price)}`,
     opts.date && `Giao: ${ddMM(opts.date)}, ${opts.slot}`,
     where && `Giao tới: ${where}`,
@@ -76,7 +76,7 @@ export function cartOrderMessage(lines: CartLine[], buyer: Buyer): { text: strin
   const digits = buyer.phone.replace(/[^\d+]/g, '').replace(/^\+?84/, '0');
   const who = [buyer.name, digits].filter(Boolean).join(' – ');
   const text =
-    `Chào Arch Flowers, mình muốn đặt:\n${items.map(row).join('\n')}\nTạm tính: ${fmt(total)}` +
+    `Chào Larom Flower, mình muốn đặt:\n${items.map(row).join('\n')}\nTạm tính: ${fmt(total)}` +
     (who ? `\nNgười đặt: ${who}` : '') +
     (buyer.note ? `\nGhi chú: ${buyer.note}` : '');
   return { text, total };

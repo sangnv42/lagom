@@ -53,7 +53,7 @@ export function PolicyPage() {
   if (!policy) return <NotFoundPage note="Trang chính sách này không tồn tại." />;
   return (
     <>
-      <Seo title={`${policy.title} | Arch Flowers`} description={`${policy.title} – Arch Flowers.`} path={`/pages/${slug}/`} />
+      <Seo title={`${policy.title} | Larom Flower`} description={`${policy.title} – Larom Flower.`} path={`/pages/${slug}/`} />
       <PolicyArticle title={policy.title} blocks={policy.blocks} />
     </>
   );

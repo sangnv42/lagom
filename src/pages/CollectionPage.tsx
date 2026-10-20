@@ -95,9 +95,9 @@ export function CollectionPage() {
 
   const seo = COLL_SEO[state.c];
   const name = collectionName(state.c);
-  const title = seo ? seo.t + ' | Arch Flowers' : name + ' – Hoa tươi cao cấp TP.HCM | Arch Flowers';
+  const title = seo ? seo.t + ' | Larom Flower' : name + ' – Hoa tươi cao cấp TP.HCM | Larom Flower';
   const desc =
-    seo?.d ?? `${name} tại Arch Flowers: ${result.totalMatching} mẫu hoa tươi, nhận đặt hoa theo mẫu, giao tận nơi TP.HCM.`;
+    seo?.d ?? `${name} tại Larom Flower: ${result.totalMatching} mẫu hoa tươi, nhận đặt hoa theo mẫu, giao tận nơi TP.HCM.`;
   const activeFilters = (state.t ? 1 : 0) + (state.p ? 1 : 0);
   const bandLabel = state.p ? (BANDS_F.find((b) => b.id === state.p)?.label ?? '') : '';
 
@@ -182,7 +182,7 @@ export function CollectionPage() {
               </div>
               {seo && (
                 <div className="c-seo">
-                  <h2>{name} tại Arch Flowers</h2>
+                  <h2>{name} tại Larom Flower</h2>
                   {seo.x.map((t, i) => (
                     <p key={i}>{t}</p>
                   ))}
