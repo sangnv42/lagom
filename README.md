@@ -18,6 +18,22 @@ pnpm build      # typecheck + vite build + sitemap/robots generation into dist/
 pnpm preview    # serve the production build on :4173
 ```
 
+## Deploy — storefront demo on Vercel (no API)
+
+The SPA ships its seed catalog in the bundle, so it needs no server. `hydrateFromApi()` and
+`hydrateSiteFromApi()` each fetch `/api/public/*` once with a 2 s timeout and keep the bundled data
+when the request fails, so a static deploy renders identically to `pnpm preview`.
+
+1. Import the repo (`github.com/sangnv42/lagom`) in Vercel. It detects Vite + pnpm; `vercel.json`
+   pins the build (`npm run build` → `dist/`) and rewrites every non-`/api` path to `index.html`
+   so deep links like `/products/hoa-1/` resolve.
+2. Optional env var `VITE_SITE_URL=https://<your-app>.vercel.env` — canonical URLs, OG tags, sitemap.
+3. Deploy. Expect ~14 MB output, almost all of it `public/img`.
+
+`/admin` and the order flow still call `/api`, which does not exist here: admin screens show fetch
+errors, orders fall back to the pre-filled Zalo handoff. For the CMS, deploy `server/` (Node 24,
+`node:sqlite`) somewhere with a persistent disk, or add a managed DB.
+
 ## Layout
 
 | Path                               | What                                                                               |
