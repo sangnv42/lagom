@@ -3,11 +3,36 @@
 Tracks the Arch Flowers reconstruction against `docs/reference/prompts/01-master-prompt.md`.
 Three independent states per area: **implemented** / **functionally verified** / **visually verified**.
 
-Last updated: 2026-10-20 (rebrand addendum at bottom)
+Last updated: 2026-10-21 (admin CMS phases 1–3 added; rebrand addendum below)
 
-## Rebrand: Larom Flower (post-verification change)
+## Admin CMS (phases 1–3)
 
-The store was renamed **Arch Flowers → Larom Flower**, all imagery was replaced, and the catalog was
+A staff CMS now lives alongside the storefront: `server/` (node:sqlite + node:http, zero runtime
+dependencies) and `src/admin/` (lazy-loaded React screens under `/admin`). Plan and contracts are in
+`docs/admin/`; what was actually verified is in `docs/admin/acceptance-evidence.md`.
+
+| Area | Implemented | Func. verified | Visually verified |
+| --- | --- | --- | --- |
+| Storage, revisions, audit, publish pointer | yes | yes (smoke.sh) | n/a |
+| Auth, roles, permission matrix | yes | yes (smoke.sh + smoke-ui.sh) | n/a |
+| Product + variant editor | yes | endpoints only | **no** |
+| Collection editor | yes | endpoints only | **no** |
+| Media library | yes | endpoints only | **no** |
+| 60-item catalog importer | yes | yes (AC-14) | **no** |
+| Storefront reads published snapshot | yes | mapping unit-tested | **no** |
+
+Honest gaps: nobody has clicked through `/admin` in a browser, collections are not seeded as content
+(the storefront still uses bundled collection data), and phase 4–7 features (review workflow, pages,
+theme editor, SEO registry, MFA enrolment, scheduled publishing) do not exist — the UI reports them
+as not configured rather than faking them.
+
+Requires Node >= 24 for `node:sqlite`. `pnpm seed` creates the owner and optionally imports the
+price list (`--catalog`); `pnpm api` runs the server on :8787, which Vite proxies at `/api`.
+
+
+## Rebrand: Lagom Flower (post-verification change)
+
+The store was renamed **Arch Flowers → Lagom Flower**, all imagery was replaced, and the catalog was
 rebuilt from the owner's price list after the diff table below was produced. The byte-identical
 results therefore describe the pre-rebrand build.
 
@@ -18,56 +43,56 @@ results therefore describe the pre-rebrand build.
   for the three numbers printed twice; second copies titled "…39B" etc.).
 - Price↔image binding is data, not round-robin anymore: `hoa-N` always shows exactly the photo
   (`trang_NN_anh_NN.jpg`) named in its price-list row — covered by a test that validates all 60 rows.
-- Owner decision: every flower belongs to every real collection, so all category pages list the same
-  60. Titles are "Hoa Larom số N" until a name mapping is provided.
+- Owner decision: every flower belongs to every real collection, so all category pages list the same 60. Titles are "Hoa Lagom số N" until a name mapping is provided.
 - Old Arch slugs (e.g. /products/bo-hoa-mini-xinh/) now render the in-app 404. Sitemap = 72 routes
   (60 products + 9 collections + 2 policies + home). Bundle shrank 673 kB → 254 kB raw.
 
-- All UI strings, SEO titles/suffixes, JSON-LD, policy & collection-SEO text: "Larom Flower" / "Larom".
+- All UI strings, SEO titles/suffixes, JSON-LD, policy & collection-SEO text: "Lagom Flower" / "Lagom".
 - Logo: text wordmark using the reference `.logo` text style (old wordmark artwork removed).
 - Imagery: the owner's 60-photo set (`public/img/hoa/trang_NN_anh_NN.jpg`), assigned to all 280 products
   deterministically round-robin (3-photo galleries); no image request goes to archflowers.com anymore.
-- `docs/qa/larom-*.png` shows the rebranded build. Screenshots of the old brand kept for history.
+- `docs/qa/larom-*.png` shows the previous (Larom) build and still needs a re-shoot for the Lagom
+  brand. Screenshots of the older Arch Flowers build are kept for history.
 - Canonical origin still comes from `VITE_SITE_URL` (default archflowers.com) — set it to the new
   deployment domain before going live.
-- Internal identifiers (`--af-*` tokens, `af.cart.v1` storage key, `larom.theme.json` provenance id
+- Internal identifiers (`--af-*` tokens, `af.cart.v1` storage key, theme provenance id
   "archflowers-reference") intentionally unchanged.
 
 ## Verification method
 
 - **Byte-level DOM text diff** (`<main>` text content, headless Chrome `--dump-dom`, live site vs local build). Rebuild+diff harness kept in `.qa-tmp/` (gitignored).
 - **Screenshots** of reference vs rebuild at 1440×1000 and 390×844 in `docs/qa/`.
-- **Unit tests**: `pnpm test` — 47 tests, all passing (money, catalog rules, query filter/sort, cart merge, delivery cutoffs/holidays, order adapters/messages, URLs, campaign).
+- **Unit tests**: `pnpm test` — 51 tests, all passing (money, catalog rules, query filter/sort, cart merge, delivery cutoffs/holidays, order adapters/messages, URLs, campaign, storefront hydration).
 - `tsc --noEmit` clean; `pnpm build` green; sitemap generator emits 304 canonical routes (reference sitemap.xml also has 304).
 
 ## Page-level DOM diff results (live site vs `vite preview` build)
 
-| Page | Result |
-|------|--------|
-| `/` (home) | main content byte-identical (3890/3890 chars) |
-| `/collections/all/` | byte-identical (2900/2900) |
-| `/collections/hoa-bo/` | byte-identical (2687/2687) |
-| `/collections/hoa-hop/` | byte-identical (2778/2778) |
-| `/products/bo-hoa-mini-xinh/` (A0302) | byte-identical (5347/5347) |
-| `/products/bo-hoa-cuc-tana-20-10-a037` (A0015) | byte-identical (5711/5711) |
-| `/pages/chinh-sach-doi-tra/` | byte-identical (557/557) |
-| `/qua-20-10/` (real 404 template) | byte-identical (104/104) |
+| Page                                           | Result                                        |
+| ---------------------------------------------- | --------------------------------------------- |
+| `/` (home)                                     | main content byte-identical (3890/3890 chars) |
+| `/collections/all/`                            | byte-identical (2900/2900)                    |
+| `/collections/hoa-bo/`                         | byte-identical (2687/2687)                    |
+| `/collections/hoa-hop/`                        | byte-identical (2778/2778)                    |
+| `/products/bo-hoa-mini-xinh/` (A0302)          | byte-identical (5347/5347)                    |
+| `/products/bo-hoa-cuc-tana-20-10-a037` (A0015) | byte-identical (5711/5711)                    |
+| `/pages/chinh-sach-doi-tra/`                   | byte-identical (557/557)                      |
+| `/qua-20-10/` (real 404 template)              | byte-identical (104/104)                      |
 
 Not yet diffed: remaining collection pages (hoa-bo/hoa-gio/hoa-hop/hoa-binh/bo-suu-tap-moi/hoa-khai-truong/hoa-sinh-nhat/hoa-cuoi share the one template — spot-checked all/hoa-bo/hoa-hop), policy `chinh-sach-bao-mat` (same template as doi-tra), other 299 products (same template as A0302/A0015).
 
 ## Phases
 
-| Phase | Implemented | Func. verified | Visually verified |
-|-------|-------------|----------------|-------------------|
-| 1 Reference capture | yes (captures in `docs/reference/captures/`) | yes | n/a |
-| 2 Foundation (types, catalog, cart, delivery, urls) | yes | yes (unit tests) | n/a |
-| 3 Theme + shell (tokens, header, footer, drawer, /dev/theme) | yes | yes (DOM diff) | yes (screenshots) |
-| 4 Homepage | yes | yes (DOM diff 100%) | yes (screenshots 1440+390) |
-| 5 Collections (facets, sort, pagination, URL codec) | yes | yes (DOM diff + tests) | yes (screenshot) |
-| 6 Product (gallery, variants, delivery, handoff) | yes | yes (DOM diff × 2 SKUs + tests) | yes (screenshot) |
-| 7 Cart + order flow (merge rules, Zalo handoff, demo adapter) | yes | yes (tests) | partial (drawer not screenshot-diffed) |
-| 8 Content + integration (policies, redirects, SEO, sitemap) | yes | yes (policy diff, sitemap count match) | partial |
-| 9 QA + release | this document | yes | yes |
+| Phase                                                         | Implemented                                  | Func. verified                         | Visually verified                      |
+| ------------------------------------------------------------- | -------------------------------------------- | -------------------------------------- | -------------------------------------- |
+| 1 Reference capture                                           | yes (captures in `docs/reference/captures/`) | yes                                    | n/a                                    |
+| 2 Foundation (types, catalog, cart, delivery, urls)           | yes                                          | yes (unit tests)                       | n/a                                    |
+| 3 Theme + shell (tokens, header, footer, drawer, /dev/theme)  | yes                                          | yes (DOM diff)                         | yes (screenshots)                      |
+| 4 Homepage                                                    | yes                                          | yes (DOM diff 100%)                    | yes (screenshots 1440+390)             |
+| 5 Collections (facets, sort, pagination, URL codec)           | yes                                          | yes (DOM diff + tests)                 | yes (screenshot)                       |
+| 6 Product (gallery, variants, delivery, handoff)              | yes                                          | yes (DOM diff × 2 SKUs + tests)        | yes (screenshot)                       |
+| 7 Cart + order flow (merge rules, Zalo handoff, demo adapter) | yes                                          | yes (tests)                            | partial (drawer not screenshot-diffed) |
+| 8 Content + integration (policies, redirects, SEO, sitemap)   | yes                                          | yes (policy diff, sitemap count match) | partial                                |
+| 9 QA + release                                                | this document                                | yes                                    | yes                                    |
 
 ## Fixes found by evidence (post-build)
 

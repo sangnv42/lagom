@@ -1,7 +1,7 @@
-# Larom Flower — reconstruction
+# Lagom Flower — reconstruction
 
 Faithful reconstruction of https://archflowers.com/ (Vietnamese florist storefront), rebranded to
-**Larom Flower** with the owner's own 60-photo flower set, built with React 18 + TypeScript + Vite +
+**Lagom Flower** with the owner's own 60-photo flower set, built with React 18 + TypeScript + Vite +
 React Router. Storefront content is Vietnamese; docs and comments are English.
 
 Everything is evidence-based: content, styles, and behavior are transcribed from the captures in
@@ -20,18 +20,18 @@ pnpm preview    # serve the production build on :4173
 
 ## Layout
 
-| Path | What |
-|------|------|
-| `docs/reference/` | Audit, phase plans, theme contract, raw captures (ground truth) |
-| `docs/qa/` | Reference vs rebuild screenshots (1440/390) |
-| `docs/implementation-status.md` | Verification matrix (implemented / functionally / visually) |
-| `src/domain/types.ts` | Shared domain types |
-| `src/data/` | Catalog build (observed-data + text-fixes + owner products), business constants |
-| `src/lib/` | money (integer VND), vntime (Asia/Ho_Chi_Minh), urls codec, img fallback, campaign |
-| `src/features/` | catalog query, cart store, delivery policy, order adapters (Zalo handoff + demo) |
-| `src/pages/`, `src/components/` | Routes and UI (Vietnamese storefront) |
-| `src/theme/archflowers.theme.json` | Token contract with provenance; `scripts/generate-tokens.mjs` emits `tokens.css` |
-| `scripts/` | one-time content extraction + token/sitemap generators |
+| Path                               | What                                                                               |
+| ---------------------------------- | ---------------------------------------------------------------------------------- |
+| `docs/reference/`                  | Audit, phase plans, theme contract, raw captures (ground truth)                    |
+| `docs/qa/`                         | Reference vs rebuild screenshots (1440/390)                                        |
+| `docs/implementation-status.md`    | Verification matrix (implemented / functionally / visually)                        |
+| `src/domain/types.ts`              | Shared domain types                                                                |
+| `src/data/`                        | Catalog build (observed-data + text-fixes + owner products), business constants    |
+| `src/lib/`                         | money (integer VND), vntime (Asia/Ho_Chi_Minh), urls codec, img fallback, campaign |
+| `src/features/`                    | catalog query, cart store, delivery policy, order adapters (Zalo handoff + demo)   |
+| `src/pages/`, `src/components/`    | Routes and UI (Vietnamese storefront)                                              |
+| `src/theme/archflowers.theme.json` | Token contract with provenance; `scripts/generate-tokens.mjs` emits `tokens.css`   |
+| `scripts/`                         | one-time content extraction + token/sitemap generators                             |
 
 ## Notable behaviors (from evidence)
 

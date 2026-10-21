@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import { lazy, Suspense, useEffect } from 'react';
 import { Navigate, Route, Routes, useLocation, useSearchParams } from 'react-router-dom';
 import { REDIRECTS } from './data/business';
 import { needsTrailingSlash } from './lib/urls';
@@ -13,6 +13,9 @@ import { DevThemePage } from './pages/DevThemePage';
 import { NotFoundPage } from './pages/NotFoundPage';
 import { CartProvider } from './features/cart/CartContext';
 import { UiProvider } from './components/Ui';
+
+// Loaded on demand so staff code never sits in a shopper's first paint.
+const AdminApp = lazy(() => import('./admin/AdminApp'));
 
 // Redirect old query-param prototypes: product.html?h= and collection.html?c= (observed in app.js).
 function LegacyQueryPages() {
@@ -72,6 +75,17 @@ function ScrollManager() {
 }
 
 export default function App() {
+  const { pathname } = useLocation();
+
+  // The admin is its own surface: no storefront header, footer or theme tokens (THEME-11).
+  if (pathname.startsWith('/admin')) {
+    return (
+      <Suspense fallback={<p style={{ padding: 24, fontFamily: 'system-ui' }}>Loading admin…</p>}>
+        <AdminApp />
+      </Suspense>
+    );
+  }
+
   return (
     <UiProvider>
       <CartProvider>

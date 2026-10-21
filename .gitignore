@@ -2,6 +2,18 @@ node_modules/
 dist/
 *.local
 .env
+*.tsbuildinfo
+# Local curl session dump (admin session cookie) — never commit.
+cookies.txt
+# Scratch/throwaway SQLite databases from smoke tests.
+*.db
+*.db-shm
+*.db-wal
 .qa-tmp/
 anh_hoa_60_tam/
 flower_prices.json
+
+# Admin CMS runtime state: SQLite database, stored media originals and uploaded source files.
+lagom.db
+lagom.db-*
+storage/

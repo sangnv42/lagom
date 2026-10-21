@@ -1,0 +1,308 @@
+{
+  "name": "Lagom-reference",
+  "title": "Lagom Flower theme contract",
+  "description": "Design tokens measured from the captured reference stylesheet (docs/reference/captures/style.css), applied to the Lagom Flower storefront. Provenance is the original archflowers.com capture.",
+  "alt": "Lagom Flower design token contract",
+  "caption": "Tokens generated into src/styles/tokens.css by scripts/generate-tokens.mjs",
+  "version": "1.0.0",
+  "verificationStatus": "measured-from-captured-stylesheet",
+  "referenceUrl": "https://archflowers.com/",
+  "capturedAt": "2026-10-20",
+  "method": "Verbatim CSS custom properties and rules read from the captured production stylesheet docs/reference/captures/style.css (style.css?v=4dd388a2) and captured rendered HTML. Not screenshots/computed styles; see evidence map for selectors.",
+  "color": {
+    "page": "#1E1714",
+    "surface": "#F5EFE6",
+    "surfaceAlt": "#EBE2D4",
+    "text": "#EFE7DA",
+    "muted": "#B6AA98",
+    "brand": "#C9A96E",
+    "onBrand": "#1E1714",
+    "border": "rgba(239,231,218,.12)",
+    "sale": "#A3284B",
+    "focus": "#E3CA97",
+    "overlay": "#0A0706",
+    "error": "#D9534F",
+    "success": null
+  },
+  "colorExceptions": {
+    "ink2": {
+      "value": "#2A201B",
+      "usedBy": "card placeholder bg, concierge gradient"
+    },
+    "wine": {
+      "value": "#3B0D18",
+      "usedBy": "reviews section (.sec.wine), data-load error band"
+    },
+    "wine2": {
+      "value": "#4d1322",
+      "usedBy": "wine hover/gradient"
+    },
+    "gold2": {
+      "value": "#e0c891",
+      "usedBy": "gold hover"
+    },
+    "ivory2": {
+      "value": "#ebe2d4",
+      "usedBy": "ivory alt surfaces"
+    },
+    "darkText": {
+      "value": "#1d1517",
+      "usedBy": "body text on ivory sections"
+    },
+    "darkMuted": {
+      "value": "#6b5d58",
+      "usedBy": "muted text on ivory sections"
+    },
+    "lineDark": {
+      "value": "rgba(29,21,23,.12)",
+      "usedBy": "borders on ivory sections"
+    },
+    "navGold": {
+      "value": "#E3CA97",
+      "usedBy": "nav links, price emphasis on dark, selected variant border"
+    },
+    "ivoryEyebrow": {
+      "value": "#7F5E26",
+      "usedBy": ".ivory .eyebrow"
+    },
+    "zaloBlue": {
+      "value": null,
+      "note": "Zalo FAB background declared in .fab a.z; kept verbatim in site.css rather than duplicated"
+    }
+  },
+  "font": {
+    "body": {
+      "family": "\"Be Vietnam Pro\",system-ui,-apple-system,\"Segoe UI\",Roboto,sans-serif",
+      "weight": 400,
+      "size": "16px",
+      "lineHeight": 1.65
+    },
+    "display": {
+      "family": "\"Playfair Display\",Georgia,\"Times New Roman\",serif",
+      "weight": null,
+      "size": null,
+      "lineHeight": 1.1
+    },
+    "heading": {
+      "family": "\"Playfair Display\",Georgia,\"Times New Roman\",serif",
+      "weight": null
+    },
+    "price": {
+      "family": "inherit (sans)",
+      "weight": 600
+    },
+    "label": {
+      "family": "inherit (sans)",
+      "weight": 500,
+      "letterSpacing": ".2em"
+    }
+  },
+  "fontFaces": [
+    {
+      "family": "Playfair Display",
+      "style": "normal",
+      "weightRange": "400 600",
+      "file": "public/fonts/playfair.woff2",
+      "format": "woff2 variable"
+    },
+    {
+      "family": "Playfair Display",
+      "style": "italic",
+      "weightRange": "400 500",
+      "file": "public/fonts/playfair-italic.woff2",
+      "format": "woff2 variable"
+    },
+    {
+      "family": "Be Vietnam Pro",
+      "style": "normal",
+      "weight": 400,
+      "file": "public/fonts/bvp-400.woff2"
+    },
+    {
+      "family": "Be Vietnam Pro",
+      "style": "normal",
+      "weight": 500,
+      "file": "public/fonts/bvp-500.woff2"
+    },
+    {
+      "family": "Be Vietnam Pro",
+      "style": "normal",
+      "weight": 600,
+      "file": "public/fonts/bvp-600.woff2"
+    }
+  ],
+  "typeScale": {
+    "h1LineHeight": 1.1,
+    "h2LineHeight": 1.15,
+    "eyebrow": {
+      "size": "12px",
+      "letterSpacing": ".2em",
+      "weight": 500
+    },
+    "nav": {
+      "size": "13px",
+      "letterSpacing": ".16em"
+    },
+    "price": {
+      "size": "16px",
+      "weight": 600,
+      "numeric": "lining-nums tabular-nums"
+    },
+    "comparePrice": {
+      "size": "13px"
+    },
+    "cardCode": {
+      "size": "12px",
+      "letterSpacing": ".06em",
+      "opacity": 0.75
+    },
+    "countdown": {
+      "size": "12px",
+      "letterSpacing": ".12em"
+    }
+  },
+  "space": {
+    "xs": null,
+    "sm": null,
+    "md": null,
+    "lg": null,
+    "xl": null,
+    "section": "clamp(80px,11vw,168px)"
+  },
+  "radius": {
+    "button": null,
+    "input": null,
+    "card": null,
+    "hero": null,
+    "panel": "16px 16px 0 0"
+  },
+  "radiusObserved": {
+    "values": [
+      "0",
+      "4px",
+      "6px",
+      "8px",
+      "9px",
+      "10px",
+      "12px",
+      "16px 16px 0 0",
+      "50%",
+      "999px"
+    ],
+    "note": "Captured stylesheet applies these per component; kept verbatim in site.css. A single universal radius token would misrepresent the reference."
+  },
+  "shadow": {
+    "header": "none (header uses backdrop-filter: blur(12px) over rgba(30,23,20,.94) + 1px bottom border var(--color-border))",
+    "card": null,
+    "overlayPanel": "0 10px 30px rgba(0,0,0,.35)"
+  },
+  "shadowObserved": {
+    "values": [
+      "0 4px 14px rgba(0,0,0,.22)",
+      "0 6px 18px rgba(0,0,0,.28)",
+      "0 10px 30px rgba(0,0,0,.35)",
+      "0 0 0 1px #D9534F (error field ring)"
+    ],
+    "note": "toast / drawer / overlay-panel respectively, as read from stylesheet."
+  },
+  "layout": {
+    "containerMax": "1440px",
+    "gutter": "clamp(16px,4.4vw,72px)",
+    "headerHeight": "92px",
+    "cardGap": null
+  },
+  "media": {
+    "productRatio": "4/5",
+    "heroRatio": null,
+    "fit": "cover",
+    "position": null,
+    "srcset": {
+      "widths": [
+        400,
+        800,
+        1200
+      ],
+      "pattern": "/archflowers-export/opt/{w}/{file}.webp with JPEG original fallback"
+    }
+  },
+  "breakpoints": [
+    480,
+    640,
+    768,
+    900,
+    1024,
+    1280,
+    1366,
+    1600
+  ],
+  "breakpointQueriesObserved": [
+    "@media(hover:hover)",
+    "@media(max-width:479px)",
+    "@media(max-width:640px)",
+    "@media(max-width:767px)",
+    "@media(max-width:899px)",
+    "@media(max-width:1023px)",
+    "@media(max-width:1599px)",
+    "@media(min-width:480px)",
+    "@media(min-width:640px)",
+    "@media(min-width:768px)",
+    "@media(min-width:900px)",
+    "@media(min-width:1024px)",
+    "@media(min-width:1280px)",
+    "@media(min-width:1366px)",
+    "@media(min-width:1600px)",
+    "@media(min-width:1024px) and (max-width:1279px)",
+    "@media(min-width:768px) and (max-width:1023px)",
+    "@media(hover:hover) and (min-width:1024px)",
+    "@media(prefers-reduced-motion:reduce)"
+  ],
+  "responsiveOverrides": {},
+  "motion": {
+    "duration": null,
+    "easing": "cubic-bezier(.2,.7,.1,1)",
+    "hoverTransform": "card image transform transition 1.6s var(--ease) (target transform declared per rule)"
+  },
+  "layers": {
+    "header": 50,
+    "overlay": 120,
+    "panel": 130,
+    "toast": 130
+  },
+  "layersObserved": {
+    "values": [
+      2,
+      20,
+      40,
+      45,
+      50,
+      80,
+      90,
+      91,
+      100,
+      110,
+      120,
+      125,
+      130
+    ],
+    "note": "z-index stack read verbatim from stylesheet; header 50, lightbox 120, zs sheet on top band."
+  },
+  "evidence": {
+    "stylesheet": "docs/reference/captures/style.css (archflowers.com/style.css?v=4dd388a2, fetched 2026-10-20 via direct HTTP)",
+    "html": "docs/reference/captures/home.html, coll_all.html, prod_a0302.html, prod_a0015.html, policy_*.html",
+    "app": "docs/reference/captures/app.js (archflowers.com/app.js?v=437d1fb4) for behavior, not theme",
+    "data": "docs/reference/captures/data.json + text-fixes.json (fetched 2026-10-20)",
+    "selection": "color/vars from :root blocks verbatim; type scale from body/.h2/.eyebrow/.price rules; layout from --max/--gut/--hdr; media ratios from .card img/.gal-track img rules; breakpoints from @media inventory"
+  },
+  "gaps": {
+    "unmeasured": [
+      "space xs–xl tokens (sheet uses per-rule paddings kept verbatim)",
+      "button/input/card/hero radii as single tokens",
+      "cardGap",
+      "heroRatio",
+      "object-position focal points",
+      "motion durations per interaction",
+      "success color",
+      "rendered-computed-style verification (no browser screenshot comparison yet)"
+    ]
+  }
+}

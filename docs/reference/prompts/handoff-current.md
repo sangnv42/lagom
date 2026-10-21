@@ -7,7 +7,7 @@ See `docs/implementation-status.md` for the full verification matrix. This is th
 The reconstruction is **feature-complete and evidence-verified**. All 9 phases in `docs/reference/phases/` are done.
 
 **Current catalog**: 60 flowers from `src/data/flower-prices.json` (owner price list), one per photo,
-price bound to its image (`hoa-N`, dup numbers → `hoa-Nb`), titled "Hoa Larom số N", listed in every
+price bound to its image (`hoa-N`, dup numbers → `hoa-Nb`), titled "Hoa Lagom số N", listed in every
 collection by owner decision. Old Arch product slugs are retired (in-app 404).
 
 - `pnpm test` → 47/47 passing. `tsc --noEmit` clean. `pnpm build` green.

@@ -10,5 +10,15 @@ export default defineConfig({
     target: 'es2020',
     assetsInlineLimit: 0,
   },
-  server: { port: 5173 },
+  server: {
+    port: 5173,
+    // The admin API runs as a separate Node process (pnpm api). Proxying keeps the browser on one
+    // origin, so the session cookie stays first-party and SameSite=Lax applies.
+    proxy: {
+      '/api': {
+        target: process.env.LAGOM_API_ORIGIN ?? 'http://localhost:8787',
+        changeOrigin: true,
+      },
+    },
+  },
 });
