@@ -1,16 +1,63 @@
 // Business configuration observed on the live reference (captured 2026-10-20).
 // Values transcribed from docs/reference/captures/app.js + home.html.
 
+// Physical stores (Google My Business, reset 2026). Dĩ An is the primary store: its number is
+// the site-wide contact/Zalo number, so SHOP mirrors Dĩ An and STORES is the full list.
+export type Store = {
+    name: string;
+    short: string;
+    address: string;
+    phone: string;
+    phoneTxt: string;
+    map: string;
+    reviewsScore: string;
+    reviewsCount: number;
+};
+
+export const STORES: Store[] = [
+    {
+        name: "Lagom Flower Dĩ An",
+        short: "Dĩ An",
+        address: "63 Trần Hưng Đạo, Dĩ An",
+        phone: "0353198089",
+        phoneTxt: "0353 198 089",
+        map: "https://maps.google.com/?q=63+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o+D%E1%BB%8B+An",
+        reviewsScore: "4.7",
+        reviewsCount: 74,
+    },
+    {
+        name: "Lagom Flower Biên Hoà",
+        short: "Biên Hoà",
+        address: "Đồng Nai",
+        phone: "0353198072",
+        phoneTxt: "0353 198 072",
+        map: "https://maps.google.com/?q=Lagom+Flower+Bi%C3%AAn+Ho%C3%A0",
+        reviewsScore: "4.3",
+        reviewsCount: 6,
+    },
+];
+
+// Review totals across stores (shown wherever the site quotes “X đánh giá Google”).
+export const STORE_REVIEW_TOTAL = STORES.reduce((n, s) => n + s.reviewsCount, 0);
+export const STORE_REVIEW_SCORE = (
+    Math.round(
+        (STORES.reduce((n, s) => n + parseFloat(s.reviewsScore) * s.reviewsCount, 0) /
+            STORE_REVIEW_TOTAL) *
+            10,
+    ) / 10
+)
+    .toFixed(1);
+
 export const SHOP = {
     name: "Lagom Flower",
-    phone: "0384790349",
-    phoneTxt: "0384 790 349",
-    zalo: "https://zalo.me/0384790349",
-    map: "https://maps.app.goo.gl/Tivz4PbrRau9YX97A",
-    address:
-        "Lô B Chung cư Bàu Cát 2, Phường Bảy Hiền (Tân Bình cũ), TP. Hồ Chí Minh",
-    reviewsCount: 84,
-    reviewsScore: "5.0",
+    stores: STORES,
+    reviewsScore: STORE_REVIEW_SCORE,
+    reviewsCount: STORE_REVIEW_TOTAL,
+    phone: STORES[0].phone,
+    phoneTxt: STORES[0].phoneTxt,
+    zalo: `https://zalo.me/${STORES[0].phone}`,
+    map: STORES[0].map,
+    address: STORES[0].address,
 } as const;
 
 // Origin hosting the captured product imagery; images stay remote-fetched (documented in README).

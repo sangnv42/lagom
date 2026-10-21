@@ -381,15 +381,17 @@ export function ProductPage() {
                     <section className="p-info">
                         <span className="eyebrow">{collectionName(coll)}</span>
                         <h1>{p.title}</h1>
-                        <a
-                            className="p-stars"
-                            href={SHOP.map}
-                            target="_blank"
-                            rel="noopener"
-                        >
-                            <span aria-hidden>★★★★★</span> {SHOP.reviewsScore} ·{" "}
-                            {SHOP.reviewsCount} đánh giá Google
-                        </a>
+                        <span className="p-stars">
+                            {SHOP.stores.map((s, i) => (
+                                <span key={s.name}>
+                                    {i > 0 && " · "}
+                                    <a href={s.map} target="_blank" rel="noopener">
+                                        {s.short} {"★★★★★"} {s.reviewsScore} ·{" "}
+                                        {s.reviewsCount} đánh giá
+                                    </a>
+                                </span>
+                            ))}
+                        </span>
                         {p.sku && (
                             <span className="p-code">Mã sản phẩm: {p.sku}</span>
                         )}
@@ -582,7 +584,7 @@ export function ProductPage() {
                                         id="addr"
                                         className="inp"
                                         autoComplete="street-address"
-                                        placeholder="Ví dụ: 12 Bàu Cát 2, tầng 3"
+                                        placeholder="Ví dụ: 12 Trần Hưng Đạo, tầng 3"
                                         value={addr}
                                         onChange={(e) =>
                                             setAddr(e.target.value)
@@ -713,16 +715,19 @@ export function ProductPage() {
                                         </li>
                                         <li>
                                             Cửa hàng:{" "}
-                                            <a
-                                                href={SHOP.map}
-                                                target="_blank"
-                                                rel="noopener"
-                                                style={{
-                                                    textDecoration: "underline",
-                                                }}
-                                            >
-                                                {SHOP.address}
-                                            </a>
+                                            {SHOP.stores.map((s, i) => (
+                                                <span key={s.name}>
+                                                    {i > 0 && " · "}
+                                                    <a
+                                                        href={s.map}
+                                                        target="_blank"
+                                                        rel="noopener"
+                                                        style={{ textDecoration: "underline" }}
+                                                    >
+                                                        {s.name} — {s.address}
+                                                    </a>
+                                                </span>
+                                            ))}
                                         </li>
                                     </ul>
                                 </div>

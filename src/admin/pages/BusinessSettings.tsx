@@ -27,6 +27,7 @@ export function BusinessSettingsPage() {
   }, []);
 
   const business = (payload.business ?? {}) as Record<string, unknown>;
+  const stores = (Array.isArray(business.stores) ? business.stores : []) as Record<string, unknown>[];
   const delivery = (payload.delivery ?? {}) as Record<string, unknown>;
   const slotsText = (Array.isArray(delivery.slots) ? (delivery.slots as string[]) : []).join('\n');
 
@@ -39,6 +40,13 @@ export function BusinessSettingsPage() {
     } else {
       setPayload((p) => ({ ...p, [path]: value }));
     }
+    setDirty(true);
+    setFields([]);
+  }
+
+  function editStore(index: number, key: string, value: unknown) {
+    const next = stores.map((s, i) => (i === index ? { ...s, [key]: value } : s));
+    setPayload((p) => ({ ...p, business: { ...business, stores: next } }));
     setDirty(true);
     setFields([]);
   }
@@ -97,16 +105,33 @@ export function BusinessSettingsPage() {
           <Field label="Tên cửa hàng" error={errorsFor(fields, 'business.name')}>
             <input value={(business.name as string) ?? ''} disabled={!editable} onChange={(e) => edit('business.name', e.target.value)} />
           </Field>
-          <Field label="Điện thoại" error={errorsFor(fields, 'business.phone')} hint="Số Việt Nam 10 chữ số, ví dụ 0384790349.">
+          <Field label="Điện thoại" error={errorsFor(fields, 'business.phone')} hint="Số Việt Nam 10 chữ số, ví dụ 0353198089.">
             <input value={(business.phone as string) ?? ''} disabled={!editable} onChange={(e) => edit('business.phone', e.target.value)} />
           </Field>
           <Field label="Liên kết Zalo">
             <input value={(business.zalo as string) ?? ''} disabled={!editable} onChange={(e) => edit('business.zalo', e.target.value)} />
           </Field>
         </div>
-        <Field label="Địa chỉ">
+        <Field label="Địa chỉ chi nhánh chính">
           <textarea value={(business.address as string) ?? ''} disabled={!editable} onChange={(e) => edit('business.address', e.target.value)} />
         </Field>
+      </Panel>
+
+      <Panel title="Chi nhánh">
+        <p className="ad-sub">Chi nhánh đầu tiên là cửa hàng chính — số điện thoại của nó là số liên hệ chung của toàn site.</p>
+        {stores.map((s, i) => (
+          <div className="ad-row" key={i}>
+            <Field label={`Tên chi nhánh ${i + 1}`}>
+              <input value={(s.name as string) ?? ''} disabled={!editable} onChange={(e) => editStore(i, 'name', e.target.value)} />
+            </Field>
+            <Field label="Địa chỉ">
+              <input value={(s.address as string) ?? ''} disabled={!editable} onChange={(e) => editStore(i, 'address', e.target.value)} />
+            </Field>
+            <Field label="Điện thoại">
+              <input value={(s.phone as string) ?? ''} disabled={!editable} onChange={(e) => editStore(i, 'phone', e.target.value)} />
+            </Field>
+          </div>
+        ))}
       </Panel>
 
       <Panel title="Giao hàng">
