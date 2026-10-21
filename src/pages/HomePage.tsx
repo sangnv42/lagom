@@ -496,7 +496,7 @@ export function HomePage() {
                                 rel="noopener"
                                 className="rv-link"
                             >
-                                Xem tất cả {SHOP.reviewsCount} đánh giá 5★ trên
+                                Xem tất cả {SHOP.reviewsCount} đánh giá trên
                                 Google Maps →
                             </a>
                         </p>

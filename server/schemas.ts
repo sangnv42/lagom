@@ -203,7 +203,7 @@ function validateSettings(p: Record<string, unknown>, ctx: ValidationContext): V
   if (!asString(business.name)) errors.push({ path: 'business.name', message: 'Business name is required.' });
   const phone = asString(business.phone);
   if (strict && !phone) errors.push({ path: 'business.phone', message: 'A contact number is required before publishing.' });
-  if (phone && !/^0\d{9}$/.test(phone.replace(/[\s.]/g, ''))) errors.push({ path: 'business.phone', message: 'Phone must be a 10-digit Vietnamese number, e.g. 0384790349.' });
+  if (phone && !/^0\d{9}$/.test(phone.replace(/[\s.]/g, ''))) errors.push({ path: 'business.phone', message: 'Phone must be a 10-digit Vietnamese number, e.g. 0353198089.' });
 
   const delivery = (p.delivery ?? {}) as Record<string, unknown>;
   const slots = asStringList(delivery.slots);

@@ -81,13 +81,26 @@ export function SiteFooter() {
                             </p>
                             <div className="store">
                                 <p className="ft-h">Địa chỉ cửa hàng</p>
-                                <p>{SHOP.address}</p>
-                                <p>
-                                    Hotline/Zalo:{" "}
-                                    <a href={`tel:${SHOP.phone}`}>
-                                        {SHOP.phoneTxt}
-                                    </a>
-                                </p>
+                                {SHOP.stores.map((s) => (
+                                    <div key={s.name} className="store-item">
+                                        <p>
+                                            <a
+                                                href={s.map}
+                                                target="_blank"
+                                                rel="noopener"
+                                            >
+                                                {s.name}
+                                            </a>
+                                        </p>
+                                        <p>{s.address}</p>
+                                        <p>
+                                            Hotline/Zalo:{" "}
+                                            <a href={`tel:${s.phone}`}>
+                                                {s.phoneTxt}
+                                            </a>
+                                        </p>
+                                    </div>
+                                ))}
                                 <a
                                     className="btn ghost cv-call"
                                     href={SHOP.map}

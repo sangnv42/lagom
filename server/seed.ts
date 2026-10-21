@@ -40,13 +40,27 @@ export function ensureSettings(): boolean {
     payload: {
       business: {
         name: 'Lagom Flower',
-        phone: '0384790349',
-        phoneTxt: '0384 790 349',
-        address: 'Lô B Chung cư Bàu Cát 2, Phường Bảy Hiền (Tân Bình cũ), TP. Hồ Chí Minh',
-        mapUrl: 'https://maps.app.goo.gl/Tivz4PbrRau9YX97A',
-        zaloUrl: 'https://zalo.me/0384790349',
-        reviewsCount: 84,
-        reviewsScore: '5.0',
+        phone: '0353198089',
+        phoneTxt: '0353 198 089',
+        address: '63 Trần Hưng Đạo, Dĩ An',
+        mapUrl: 'https://maps.google.com/?q=63+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o+D%E1%BB%8B+An',
+        zaloUrl: 'https://zalo.me/0353198089',
+        reviewsCount: 80,
+        reviewsScore: '4.7',
+        stores: [
+          {
+            name: 'Lagom Flower Dĩ An',
+            address: '63 Trần Hưng Đạo, Dĩ An',
+            phone: '0353198089',
+            mapUrl: 'https://maps.google.com/?q=63+Tr%E1%BA%A7n+H%C6%B0ng+%C4%90%E1%BA%A1o+D%E1%BB%8B+An',
+          },
+          {
+            name: 'Lagom Flower Biên Hoà',
+            address: 'Đồng Nai',
+            phone: '0353198072',
+            mapUrl: 'https://maps.google.com/?q=Lagom+Flower+Bi%C3%AAn+Ho%C3%A0',
+          },
+        ],
       },
       delivery: {
         slots: ['08:00 – 11:00', '11:00 – 14:00', '15:00 – 18:00'],

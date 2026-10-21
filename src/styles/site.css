@@ -476,6 +476,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 .p-price b{font-variant-numeric:lining-nums tabular-nums}
 .p-stars{display:inline-flex;gap:8px;align-items:center;margin-top:10px;font-size:14px;color:#E3CA97;text-decoration:underline;text-decoration-thickness:1px;text-underline-offset:4px}
 .p-stars span{letter-spacing:.08em;text-decoration:none}
+.p-stars a{text-decoration:underline}
 .p-code{font-size:12px;letter-spacing:.12em}
 .p-trust,.hint{font-size:13px;line-height:1.5}
 .fld legend,.fld>label{font-size:12px;letter-spacing:.12em;font-weight:500}
@@ -505,6 +506,7 @@ body{font-weight:400;font-size:16px;line-height:1.65}
 .mnav a small{display:block;font:400 13px/1.4 var(--sans);color:var(--muted);margin-top:4px}
 .store h4{margin-bottom:8px}
 .store p{margin:0 0 6px}
+.store .store-item{margin-bottom:12px}
 .store a:not(.btn){color:#E3CA97}
 .store .btn{margin-top:10px;min-height:48px}
 .drawer .d-foot small{display:block;font-size:13px;line-height:1.5}

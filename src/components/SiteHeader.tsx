@@ -154,15 +154,20 @@ export function SiteHeader() {
                 >
                     Chính sách đổi trả
                 </Link>
-                <a
-                    href={SHOP.map}
-                    target="_blank"
-                    rel="noopener"
-                    onClick={() => setMenuOpen(false)}
-                >
-                    Địa chỉ cửa hàng
-                    <small>{SHOP.address}</small>
-                </a>
+                {SHOP.stores.map((s) => (
+                    <a
+                        key={s.name}
+                        href={s.map}
+                        target="_blank"
+                        rel="noopener"
+                        onClick={() => setMenuOpen(false)}
+                    >
+                        {s.name}
+                        <small>
+                            {s.address} · {s.phoneTxt}
+                        </small>
+                    </a>
+                ))}
             </nav>
         </>
     );
